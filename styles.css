@@ -31,7 +31,7 @@ a { color: inherit; }
 /* ---------- shared type ---------- */
 .script { font-family: var(--script); font-weight: 400; color: var(--gold); line-height: 1.1; }
 .caps { text-transform: uppercase; letter-spacing: .22em; font-weight: 500; }
-.small { font-size: clamp(12.5px, 3.3vw, 15px); color: var(--ink-soft); line-height: 1.8; }
+.small { text-wrap: balance; font-size: clamp(12.5px, 3.3vw, 15px); color: var(--ink-soft); line-height: 1.8; }
 .divider { display: flex; align-items: center; gap: 12px; width: min(300px, 70%); margin: 28px auto; }
 .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--gold); opacity: .7; }
 .divider span { width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
@@ -49,6 +49,20 @@ a { color: inherit; }
 .btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, .envelope:focus-visible {
   outline: 2px solid var(--rose); outline-offset: 3px;
 }
+
+
+/* ---------- optical centring ----------
+   Letter-spacing adds space after the last letter, which pushes centred
+   spaced-out capitals slightly left. Matching padding on the left cancels it. */
+.caps { padding-left: .22em; }
+.date { padding-left: .13em; }
+.eyebrow { padding-left: .3em; }
+.heading { padding-left: .24em; }
+.sub { padding-left: .22em; }
+.timer span { padding-left: .22em; }
+.intro-hint, .env-card-date { padding-left: .3em; }
+.btn { text-indent: .28em; }
+.btn-ghost { text-indent: .2em; }
 
 /* ---------- florals ---------- */
 .floral { position: absolute; pointer-events: none; user-select: none; z-index: 0; }
@@ -161,8 +175,8 @@ a { color: inherit; }
 /* ---------- countdown ---------- */
 .countdown { text-align: center; padding: 64px var(--gutter) 72px; background: var(--paper-deep); }
 .section-script { font-size: clamp(38px, 9vw, 52px); margin-bottom: 18px; }
-.timer { display: flex; justify-content: center; gap: clamp(10px, 4vw, 40px); }
-.timer div { min-width: clamp(64px, 18vw, 110px); padding: 16px 6px 12px; border: 1px solid var(--gold-soft); border-radius: 6px; background: var(--paper); }
+.timer { display: grid; grid-template-columns: repeat(4, minmax(0, 120px)); justify-content: center; gap: clamp(8px, 3vw, 32px); }
+.timer div { min-width: 0; padding: 16px 4px 12px; border: 1px solid var(--gold-soft); border-radius: 6px; background: var(--paper); }
 .timer b { display: block; font-size: clamp(32px, 8vw, 52px); font-weight: 500; line-height: 1; }
 .timer span { display: block; margin-top: 8px; font-size: clamp(10.5px, 2.6vw, 13px); letter-spacing: .22em; text-transform: uppercase; color: var(--rose); font-weight: 600; }
 
@@ -174,11 +188,11 @@ a { color: inherit; }
 .section .divider { margin-top: 16px; margin-bottom: 40px; }
 
 .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; max-width: 820px; margin: 0 auto; }
-.card { padding: 34px 24px 30px; background: rgba(255, 255, 255, .35); border: 1px solid var(--gold-soft); border-radius: 6px; }
+.card { display: flex; flex-direction: column; align-items: center; padding: 34px 24px 30px; background: rgba(255, 255, 255, .35); border: 1px solid var(--gold-soft); border-radius: 6px; }
 .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--rose); margin-bottom: 12px; }
 .card-big { font-size: clamp(24px, 6vw, 30px); font-weight: 500; line-height: 1.25; }
 .card-text { color: var(--ink-soft); font-size: 18px; margin-top: 8px; }
-.card-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 22px; }
+.card-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: auto; padding-top: 22px; }
 .map { max-width: 820px; margin: 22px auto 0; border-radius: 6px; overflow: hidden; border: 1px solid var(--gold-soft); aspect-ratio: 16 / 9; background: var(--paper-deep); }
 .map iframe { width: 100%; height: 100%; border: 0; filter: sepia(.25) saturate(.8); }
 
@@ -200,14 +214,14 @@ a { color: inherit; }
 .rites { display: grid; gap: 22px; margin-top: 26px; }
 
 /* ---------- attire ---------- */
-.attire-art { max-width: 420px; margin: 0 auto; }
+.attire-art { max-width: 500px; margin: 0 auto; }
 .attire-art img { width: 100%; height: auto; margin: 0 auto; }
 .attire-art figcaption { margin-top: 18px; }
 .attire-art .card-text { text-wrap: balance; }
 
 /* ---------- RSVP ---------- */
 .rsvp { max-width: 520px; margin: 34px auto 0; text-align: left; display: grid; gap: 20px;
-  padding: clamp(24px, 6vw, 40px); background: rgba(255, 255, 255, .45); border: 1px solid var(--gold-soft); border-radius: 8px; }
+  padding: clamp(24px, 6vw, 40px); background: #f8efea; border: 1px solid var(--gold-soft); border-radius: 8px; }
 .rsvp-hello { text-align: center; font-size: 22px; font-style: italic; color: var(--ink); }
 .field { display: grid; gap: 7px; }
 .field > span, .choice legend { font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
@@ -253,16 +267,18 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
 
 @media (max-width: 520px) {
   .split > div { padding: 2px 6px; }
-  .split .sub { font-size: 12px; letter-spacing: .13em; white-space: nowrap; }
+  .split .sub { font-size: 12px; letter-spacing: .13em; padding-left: .13em; white-space: nowrap; }
   body { font-size: 17px; }
   .nav-mono { display: none; }
   .nav { justify-content: center; }
   .choice { grid-template-columns: 1fr; }
-  .attire-art { max-width: 300px; }
+  .attire-art { max-width: 380px; }
+  .fl-sec-br { width: 120px; opacity: .75; }
+  .caps.small { letter-spacing: .18em; padding-left: .18em; }
 }
 
 @media (max-width: 380px) {
-  .split .sub { font-size: 11.5px; letter-spacing: .08em; }
+  .split .sub { font-size: 11.5px; letter-spacing: .08em; padding-left: .08em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
