@@ -22,7 +22,7 @@ function doPost(e) {
     const p = e.parameter;
     const clean = (v) => String(v || '').slice(0, 1000).replace(/^[=+\-@]/, "'$&"); // stop formula injection
     sheet.appendRow([
-      new Date(), clean(p.name), clean(p.attending), clean(p.guests), clean(p.guestNames),
+      new Date(), clean(p.name), clean(p.attending), Number(p.guests) || 0, clean(p.guestNames),
       clean(p.dietary), clean(p.email), clean(p.message), clean(p.invite),
     ]);
     return ContentService.createTextOutput(JSON.stringify({ ok: true }))
