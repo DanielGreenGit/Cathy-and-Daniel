@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cathy and Daniel//Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cathy-daniel-wedding-20270804@danielgreengit.github.io
+DTSTAMP:20261119T000000Z
+DTSTART:20270804T060000Z
+DTEND:20270804T120000Z
+SUMMARY:Cathy & Daniel's Wedding
+LOCATION:Surf Suites\, URBNSURF Sydney\, Sydney Olympic Park NSW
+DESCRIPTION:Ceremony begins at 4:00 pm. Attire: Formal.\nhttps://danielgreengit.github.io/Cathy-and-Daniel/
+URL:https://danielgreengit.github.io/Cathy-and-Daniel/
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Cathy & Daniel's wedding is tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR

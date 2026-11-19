@@ -93,14 +93,6 @@ $("gcal").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
   "&dates=" + start + "/" + end +
   "&location=" + encodeURIComponent(CONFIG.EVENT_PLACE) +
   "&details=" + encodeURIComponent("Ceremony begins at 4:00 pm. " + location.origin + location.pathname);
-const ics = [
-  "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Cathy and Daniel//Wedding//EN",
-  "BEGIN:VEVENT", "UID:cathy-daniel-20270804@wedding", "DTSTAMP:" + start,
-  "DTSTART:" + start, "DTEND:" + end,
-  "SUMMARY:" + CONFIG.EVENT_TITLE, "LOCATION:" + CONFIG.EVENT_PLACE.replace(/,/g, "\\,"),
-  "DESCRIPTION:Ceremony begins at 4:00 pm.", "END:VEVENT", "END:VCALENDAR",
-].join("\r\n");
-$("ics").href = "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
 
 /* ---------- RSVP ---------- */
 const form = $("rsvp-form");

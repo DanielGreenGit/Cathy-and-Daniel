@@ -249,6 +249,8 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
 .reveal.in { opacity: 1; transform: none; }
 
 @media (max-width: 520px) {
+  .split > div { padding: 2px 6px; }
+  .split .sub { font-size: 12px; letter-spacing: .13em; white-space: nowrap; }
   body { font-size: 17px; }
   .nav-mono { display: none; }
   .nav { justify-content: center; }
@@ -256,6 +258,10 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
   .attire-row { grid-template-columns: 1fr 1fr; }
   .attire-row > div { grid-column: 1 / -1; grid-row: 1; padding-bottom: 6px; }
   .attire-dress, .attire-suit { height: 150px; }
+}
+
+@media (max-width: 380px) {
+  .split .sub { font-size: 11.5px; letter-spacing: .08em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
