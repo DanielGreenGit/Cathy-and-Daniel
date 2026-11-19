@@ -76,29 +76,26 @@ a { color: inherit; }
 .envelope {
   --w: min(86vw, 440px);
   position: relative; width: var(--w); height: calc(var(--w) * .66);
-  border: 0; background: none; cursor: pointer; perspective: 1400px;
-  filter: drop-shadow(0 18px 28px rgba(110, 60, 50, .18));
+  border: 0; padding: 0; background: none; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
-.env-back, .env-pocket, .env-flap { position: absolute; inset: 0; }
-.env-back { background: #ecc8c1; border-radius: 6px; }
-.env-pocket {
-  z-index: 3; border-radius: 0 0 6px 6px;
-  background: linear-gradient(175deg, #fae6e1 0%, #f6dbd5 100%);
-  clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
-}
+/* Shapes are inline SVG, not CSS clip-path: browsers can drop clip-path
+   on layers next to a 3D-animated element, which made the pocket cover the card. */
+.env-back, .env-pocket, .env-flap { position: absolute; left: 0; top: 0; width: 100%; display: block; }
+.env-back { height: 100%; z-index: 1; background: #ecc8c1; border-radius: 6px; box-shadow: 0 18px 34px rgba(110, 60, 50, .2); }
+.env-pocket { height: 100%; z-index: 3; overflow: visible; }
 .env-flap {
-  z-index: 4; height: 58%;
-  background: linear-gradient(#e8bfb7, #f1d0c9);
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  transform-origin: top center;
-  transition: transform .8s cubic-bezier(.6, 0, .3, 1), z-index 0s .4s;
+  height: 58%; z-index: 4;
+  transform-origin: 50% 0;
+  transform: perspective(900px) rotateX(0deg);
+  transition: transform .7s cubic-bezier(.6, 0, .3, 1), z-index 0s .35s;
 }
 .env-card {
   position: absolute; z-index: 2; left: 7%; right: 7%; top: 8%; height: 86%;
   background: var(--paper); border-radius: 3px;
   box-shadow: inset 0 0 0 1px var(--gold-soft), 0 2px 10px rgba(110, 60, 50, .12);
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 7%;
-  transition: transform 1s cubic-bezier(.5, 0, .2, 1) .6s;
+  transition: transform 1s cubic-bezier(.5, 0, .2, 1) .55s;
 }
 .env-card .script { font-size: clamp(26px, 7vw, 40px); }
 .env-card-date { font-size: 12px; letter-spacing: .3em; color: var(--ink-soft); margin-top: 4px; }
@@ -109,14 +106,14 @@ a { color: inherit; }
   background: radial-gradient(circle at 35% 30%, #c4767a, #9b4a50 55%, #7e3940);
   box-shadow: 0 2px 6px rgba(80, 30, 30, .35), inset 0 0 0 3px rgba(255, 255, 255, .12), inset 0 0 0 6px rgba(0, 0, 0, .08);
   display: grid; place-items: center;
-  transition: opacity .35s, transform .35s;
+  transition: opacity .3s, transform .3s;
 }
 .seal span { font: 400 clamp(18px, 5vw, 28px)/1 var(--script); color: #f6dcd6; }
 .seal i { font-style: normal; font-size: .7em; padding: 0 1px; }
 .envelope:hover .seal { transform: translate(-50%, -50%) scale(1.05); }
 
 .intro.opening .seal { opacity: 0; transform: translate(-50%, -50%) scale(.6); }
-.intro.opening .env-flap { transform: rotateX(180deg); z-index: 1; }
+.intro.opening .env-flap { transform: perspective(900px) rotateX(180deg); z-index: 0; }
 .intro.opening .env-card { transform: translateY(-55%); }
 
 /* ---------- nav ---------- */
