@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#a47c55" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- dress form neck -->
+  <ellipse cx="100" cy="7" rx="7" ry="2"/>
+  <path d="M93 7 L94 17 Q87 19 81 23"/>
+  <path d="M107 7 L106 17 Q113 19 119 23"/>
+  <!-- straps -->
+  <path d="M83 23 L84 34"/>
+  <path d="M117 23 L116 34"/>
+  <!-- sweetheart bodice -->
+  <path d="M81 35 Q86 30 92 33 Q97 36 100 41 Q103 36 108 33 Q114 30 119 35"/>
+  <path d="M81 35 Q79 52 85 66"/>
+  <path d="M119 35 Q121 52 115 66"/>
+  <path d="M85 66 Q93 68 100 72 Q107 68 115 66"/>
+  <!-- skirt -->
+  <path d="M85 66 Q66 112 24 176"/>
+  <path d="M115 66 Q134 112 176 176"/>
+  <path d="M24 176 Q36 186 52 182 Q66 191 82 186 Q100 194 118 186 Q134 191 148 182 Q164 186 176 176"/>
+  <!-- soft pleats -->
+  <path d="M92 69 Q78 128 64 184" stroke-opacity=".75"/>
+  <path d="M100 72 Q99 130 100 189" stroke-opacity=".75"/>
+  <path d="M108 69 Q122 128 136 184" stroke-opacity=".75"/>
+  <path d="M88 67 Q64 124 40 180" stroke-opacity=".5"/>
+  <path d="M112 67 Q136 124 160 180" stroke-opacity=".5"/>
+</svg>

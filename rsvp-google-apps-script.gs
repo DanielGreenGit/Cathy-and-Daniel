@@ -12,6 +12,9 @@
  *   "Attending" and a capped number for "Party size".
  * - A hidden spam-trap field and a rate limit block bots and floods.
  */
+// Your "Wedding RSVPs" Google Sheet. This lets the script work whether it was
+// opened from the sheet (Extensions > Apps Script) or created at script.google.com.
+const SHEET_ID = '1o33bruZ8vaZGmCXZKFhdWUlvH6jqpeZ6OKE7X0sfqew';
 const SHEET_NAME = 'RSVPs';
 const HEADERS = ['Received', 'Name', 'Attending', 'Party size', 'Guest names',
                  'Dietary requirements', 'Email', 'Message', 'Invite (from personal link)'];
@@ -55,7 +58,7 @@ function doPost(e) {
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const ss = SpreadsheetApp.openById(SHEET_ID);
     let sheet = ss.getSheetByName(SHEET_NAME);
     if (!sheet) sheet = ss.insertSheet(SHEET_NAME);
     if (sheet.getLastRow() === 0) {
