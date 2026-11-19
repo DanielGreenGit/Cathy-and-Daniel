@@ -4,7 +4,7 @@
 const CONFIG = {
   // Paste the Web App URL from Google Apps Script here (see README.md).
   // While it is empty the form runs in preview mode and nothing is saved.
-  RSVP_ENDPOINT: "",
+  RSVP_ENDPOINT: "https://script.google.com/macros/s/AKfycbzrwKxvRzAzDXLMX6khjz3IlbEIFppYl0F3L6WDpM5iYutHs_IK51k0CWJyBcwbcsQ9/exec",
 
   RSVP_DEADLINE: "30 June 2027",
   DEFAULT_SEATS: 2,                 // party size allowed when the link has no personal invite
