@@ -1,24 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#a47c55" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-  <!-- dress form neck -->
-  <ellipse cx="100" cy="7" rx="7" ry="2"/>
-  <path d="M93 7 L94 17 Q87 19 81 23"/>
-  <path d="M107 7 L106 17 Q113 19 119 23"/>
-  <!-- straps -->
-  <path d="M83 23 L84 34"/>
-  <path d="M117 23 L116 34"/>
-  <!-- sweetheart bodice -->
-  <path d="M81 35 Q86 30 92 33 Q97 36 100 41 Q103 36 108 33 Q114 30 119 35"/>
-  <path d="M81 35 Q79 52 85 66"/>
-  <path d="M119 35 Q121 52 115 66"/>
-  <path d="M85 66 Q93 68 100 72 Q107 68 115 66"/>
-  <!-- skirt -->
-  <path d="M85 66 Q66 112 24 176"/>
-  <path d="M115 66 Q134 112 176 176"/>
-  <path d="M24 176 Q36 186 52 182 Q66 191 82 186 Q100 194 118 186 Q134 191 148 182 Q164 186 176 176"/>
-  <!-- soft pleats -->
-  <path d="M92 69 Q78 128 64 184" stroke-opacity=".75"/>
-  <path d="M100 72 Q99 130 100 189" stroke-opacity=".75"/>
-  <path d="M108 69 Q122 128 136 184" stroke-opacity=".75"/>
-  <path d="M88 67 Q64 124 40 180" stroke-opacity=".5"/>
-  <path d="M112 67 Q136 124 160 180" stroke-opacity=".5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 9 168 141" fill="none" stroke="#a47c55" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Redrawn from the gown on the printed entourage card -->
+  <path d="M96 13.2 L103 13.2"/>
+  <path d="M96 13.2 Q95.4 17 95 18.6 Q92 19.4 89.6 20"/>
+  <path d="M103 13.2 Q103.6 17 104 18.6 Q107 19.4 109.4 20.4"/>
+  <path d="M89.6 20 Q85 21.5 84 26 Q82.5 36 80.4 46 Q80.6 49.5 84 52.5 L87.5 56"/>
+  <path d="M109.4 20.4 Q112.6 22.5 113 27 Q113.6 31 111.6 36 Q110.6 42 109.4 50"/>
+  <path d="M91 21 L90.4 32.6"/>
+  <path d="M108.2 21.2 L108.4 28.6"/>
+  <path d="M90.4 32.6 Q95 28.6 100 30.2 Q102.6 31 104 32.2 Q106 30.2 108.4 28.6"/>
+  <path d="M90.4 32.6 Q91.6 42 94.6 49.4"/>
+  <path d="M94.6 49.4 Q97.6 49.4 100.6 51.2 Q105 49.8 109.4 50"/>
+  <path d="M94.6 49.4 Q86 60 72 84 Q58 108 42 122 Q30 130 17 132.4 Q10 133.6 9.4 136 Q9.6 139.4 18 139.6 L24.6 139.8"/>
+  <path d="M109.4 50 Q118 64 128 84 Q140 108 150 126 Q153 130 159 132.6 Q166 135 165.6 137.6 Q164.6 140.4 158.6 140.4"/>
+  <path d="M24.6 139.8 Q30 144.6 40.4 145 Q52 145.6 60 142.8 Q68 147.6 82 143.6 Q97 149.4 113 144.4 Q126 147.4 140 144 Q150 145 158.6 140.4"/>
+  <path d="M88 57 Q66 96 46 122 Q36 133 24.6 139.8"/>
+  <path d="M92 53 Q78 92 70 118 Q64 132 60 142.8"/>
+  <path d="M98.6 50.8 Q90 98 82 143.6"/>
+  <path d="M104.6 50.6 Q108 96 113 144.4"/>
+  <path d="M110.6 52.4 Q124 96 140 144"/>
+  <path d="M43 127.6 Q35 133.6 28.4 136.2" stroke-opacity=".6"/>
 </svg>

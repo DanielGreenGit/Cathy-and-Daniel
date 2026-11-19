@@ -1,35 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200" fill="none" stroke="#a47c55" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Proportions: shoulders y14, waist button y63, jacket hem y100 (about half way
-       from shoulder to floor), trousers to y196. -->
-  <!-- form neck -->
-  <ellipse cx="60" cy="6" rx="6" ry="1.8"/>
-  <path d="M54 6 Q54.6 10 54.5 14 M66 6 Q65.4 10 65.5 14"/>
-  <!-- shirt collar -->
-  <path d="M54.5 14 L57 20 L60 23 L63 20 L65.5 14"/>
-  <!-- tie -->
-  <path d="M58.4 23 L61.6 23 L61 26.5 L59 26.5 Z"/>
-  <path d="M59 26.5 L57.9 52 L60 56 L62.1 52 L61 26.5"/>
-  <!-- shoulders -->
-  <path d="M54.5 14 Q46 15.5 40 19 Q36.5 21 36 27"/>
-  <path d="M65.5 14 Q74 15.5 80 19 Q83.5 21 84 27"/>
-  <!-- sleeves -->
-  <path d="M36 27 L33.6 60 L32.8 93 L38.4 94.2 L39.2 62 L40.2 40"/>
-  <path d="M84 27 L86.4 60 L87.2 93 L81.6 94.2 L80.8 62 L79.8 40"/>
-  <!-- jacket sides below the cuffs -->
-  <path d="M38.6 94.3 L40 100 M81.4 94.3 L80 100"/>
-  <!-- notch lapels -->
-  <path d="M54.5 14 L51.6 23 L48.6 24.4 L57.9 56"/>
-  <path d="M51.6 23 L53.2 26"/>
-  <path d="M65.5 14 L68.4 23 L71.4 24.4 L62.1 56"/>
-  <path d="M68.4 23 L66.8 26"/>
-  <!-- front closing, button and cutaway hem -->
-  <path d="M57.9 56 L60 60 L62.1 56"/>
-  <circle cx="60" cy="63" r="1.1" fill="#a47c55" stroke="none"/>
-  <path d="M60 60 L60 66 Q58.2 88 54.5 99.4 Q47 101 40 100"/>
-  <path d="M60 66 Q61.8 88 65.5 99.4 Q73 101 80 100"/>
-  <!-- pockets -->
-  <path d="M67 37.2 L74.5 36.4"/>
-  <path d="M42.6 82 L52.4 82.4 M67.6 82.4 L77.4 82"/>
-  <!-- trousers -->
-  <path d="M42.2 100.4 L45 196 L55 196 L59 106.5 Q60 104.8 61 106.5 L65 196 L75 196 L77.8 100.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="13 9 78 150" fill="none" stroke="#a47c55" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Redrawn from the suit on the printed entourage card -->
+  <path d="M45 13.6 Q52 12 59.6 13.6"/>
+  <path d="M45 13.6 L49.6 21 L52.2 18.2 L55 21 L59.6 13.6"/>
+  <path d="M50.6 19.6 L53.8 19.6 L53.2 22.6 L51.2 22.6 Z"/>
+  <path d="M51.2 22.6 L50.2 51.6 L52.2 55.6 L54.2 51.6 L53.2 22.6"/>
+  <path d="M45 13.6 Q36 17.4 30 20.4 Q25.6 22.4 24.6 26.6"/>
+  <path d="M59.6 13.6 Q68.6 17.4 74.6 20.4 Q79 22.4 80 26.6"/>
+  <path d="M45 13.6 L39.6 23.4 L42 25 L38.6 26.2 L51.4 58.6"/>
+  <path d="M59.6 13.6 L65 23.4 L62.6 25 L66 26.2 L53 58.6"/>
+  <path d="M24.6 26.6 Q22 40 17.6 60.4 Q21 74 28.6 90.4"/>
+  <path d="M30.4 32 Q30.6 46 30.4 57.4 Q28.6 61 28.4 64 Q30 71 33.4 78.6"/>
+  <path d="M27.8 84.4 L35.4 80.4 Q36.6 83 35.6 86.6 L29.4 90.4"/>
+  <path d="M80 26.6 Q82.4 40 86.4 60.4 Q87.2 76 84 90.4"/>
+  <path d="M74.2 32 Q74 46 74.2 57.4 Q76 61 76.2 64 Q76 73 74.6 81"/>
+  <path d="M74.6 86.6 L83.6 89 Q84.6 91 83.6 92.4 L75.6 90.6 Q74.4 88.6 74.6 86.6"/>
+  <path d="M29.4 90.4 L29.6 98.2"/>
+  <path d="M75 91 L74.8 98.2"/>
+  <path d="M51.4 58.6 L51.6 62 Q51.2 80 49.8 88 Q46 97.4 39 99.2 Q33.6 99.4 29.6 98.2"/>
+  <path d="M53 58.6 L52.8 62 Q53.2 80 54.6 88 Q58.4 97.4 65.4 99.2 Q70.8 99.4 74.8 98.2"/>
+  <circle cx="52.2" cy="62.4" r="0.9" fill="#a47c55" stroke="none"/>
+  <circle cx="52.4" cy="75.2" r="0.9" fill="#a47c55" stroke="none"/>
+  <path d="M64.2 37.2 L71.2 36.4 L71.4 38.6 L64.4 39.4 Z"/>
+  <path d="M32.4 73.2 L40.4 73.6 Q41 75 40.4 76.4 L32.6 76 Q32 74.6 32.4 73.2 Z"/>
+  <path d="M64.2 73.6 L72.6 73.2 Q73.2 74.6 72.6 76 L64.4 76.4 Q63.8 75 64.2 73.6 Z"/>
+  <path d="M31.2 99.2 L33.2 155.4 L41.4 155.8 L51.6 105.6 L52.8 105.6 L56.8 155.8 L67 155.4 L71.4 99.2"/>
+  <path d="M38.6 112 L39.6 154" stroke-opacity=".45"/>
+  <path d="M63.4 112 L62.8 154" stroke-opacity=".45"/>
 </svg>
