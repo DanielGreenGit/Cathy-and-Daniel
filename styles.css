@@ -194,6 +194,9 @@ a { color: inherit; }
 .split { display: grid; grid-template-columns: 1fr 1fr; margin-top: 16px; }
 .split > div + div { border-left: 1px solid var(--gold-soft); }
 .split > div { padding: 2px 10px; }
+.has-motif { position: relative; isolation: isolate; }
+.nw { white-space: nowrap; }
+.motif { position: absolute; z-index: -1; left: 50%; top: 50%; width: 100px; height: 100px; transform: translate(-50%, -50%); opacity: .17; pointer-events: none; }
 .rites { display: grid; gap: 22px; margin-top: 26px; }
 
 /* ---------- attire ---------- */
