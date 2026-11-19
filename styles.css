@@ -200,10 +200,10 @@ a { color: inherit; }
 .rites { display: grid; gap: 22px; margin-top: 26px; }
 
 /* ---------- attire ---------- */
-.attire-row { display: grid; grid-template-columns: 1fr minmax(0, 230px) 1fr; align-items: end; gap: clamp(10px, 4vw, 40px); max-width: 640px; margin: 0 auto; }
-.attire-row > div { padding-bottom: 30px; }
-.attire-dress { height: 180px; width: auto; max-width: none; justify-self: end; }
-.attire-suit { height: 180px; width: auto; max-width: none; justify-self: start; }
+.attire-art { max-width: 420px; margin: 0 auto; }
+.attire-art img { width: 100%; height: auto; margin: 0 auto; }
+.attire-art figcaption { margin-top: 18px; }
+.attire-art .card-text { text-wrap: balance; }
 
 /* ---------- RSVP ---------- */
 .rsvp { max-width: 520px; margin: 34px auto 0; text-align: left; display: grid; gap: 20px;
@@ -258,9 +258,7 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
   .nav-mono { display: none; }
   .nav { justify-content: center; }
   .choice { grid-template-columns: 1fr; }
-  .attire-row { grid-template-columns: 1fr 1fr; }
-  .attire-row > div { grid-column: 1 / -1; grid-row: 1; padding-bottom: 6px; }
-  .attire-dress, .attire-suit { height: 150px; }
+  .attire-art { max-width: 300px; }
 }
 
 @media (max-width: 380px) {
